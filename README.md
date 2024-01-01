@@ -14,3 +14,6 @@ This project uses or will use the following technologies:
 - [Jinja](https://jinja.palletsprojects.com/)
 - [HTMX](https://htmx.org/)
 - [TailwindCSS](https://tailwindcss.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Beanie](https://roman-right.github.io/beanie/)
+- [Docker](https://www.docker.com/)
