@@ -13,7 +13,6 @@ jinja2 = "^3.1.2"
 beanie = "^1.24.0"
 itsdangerous = "^2.1.2"
 pydantic-settings = "^2.1.0"
-pytailwindcss = "^0.2.0"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -24,6 +23,7 @@ mypy = "^1.8.0"
 pytest = "^7.4.4"
 pytest-asyncio = "^0.23.3"
 pytest-cov = "^4.1.0"
+pytailwindcss = "^0.2.0"
 
 [tool.ruff]
 exclude = [".venv"]
@@ -37,10 +37,11 @@ asyncio_mode = "auto"
 
 [tool.taskipy.tasks]
 run = "uvicorn kalel_dev.main:app --reload"
+css = "tailwindcss -i ./kalel_dev/static/src/tw.css -o ./kalel_dev/static/css/main.css --watch"
 lint = "ruff . && ruff check --select I . && ruff format . --check && mypy ."
 format = "ruff . --fix && ruff format . && ruff check --select I . --fix"
 pre_test = "task lint"
-test = "pytest -s -x --cov=organizadin_server --cov-report=term-missing"
+test = "pytest -s -x --cov=kalel_dev --cov-report=term-missing"
 post_test = "coverage html"
 
 [build-system]
