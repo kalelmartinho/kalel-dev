@@ -22,13 +22,22 @@ ruff = "^0.1.9"
 mypy = "^1.8.0"
 pytest = "^7.4.4"
 pytest-asyncio = "^0.23.3"
+pytest-cov = "^4.1.0"
 
 [tool.ruff]
-exclude = [".venv", "alembic"]
+exclude = [".venv"]
 
 [tool.pytest.ini_options]
 pythonpath = "."
 asyncio_mode = "auto"
+
+[tool.taskipy.tasks]
+run = "uvicorn kalel_dev.main:app --reload"
+lint = "ruff . && ruff check --select I . && ruff format . --check && mypy ."
+format = "ruff . --fix && ruff format . && ruff check --select I . --fix"
+pre_test = "task lint"
+test = "pytest -s -x --cov=organizadin_server --cov-report=term-missing"
+post_test = "coverage html"
 
 [build-system]
 requires = ["poetry-core"]
