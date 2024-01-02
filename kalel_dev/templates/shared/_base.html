@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
     <title>{{ page_title }}</title>
     <meta name="description" content="{{ page_description }}">
+    <meta name="author" content="{{ author }}">
+    <meta name="keywords" content="{{ keywords }}">
 
     <!-- Facebook Open Graph -->
     <meta property="og:site_name" content="{{ site_name }}">
@@ -20,8 +22,20 @@
     <link rel="stylesheet" href="{{ url_for('static', path='css/main.css') }}" type="text/css" />
 </head>
 <body>
-    {% block content %}
-    <!-- This is where the content from the child template will go -->
+    {% block header %}
+    {% include "/shared/_header.html" %}
     {% endblock %}
+
+    <div id="content">
+        {% block content %}
+        <!-- This is where the content from the child template will go -->
+        {% endblock %}
+    </div>
+
+    {% block footer %}
+    {% include "/shared/_footer.html" %}
+    {% endblock %}
+
+
 </body>
 </html>
