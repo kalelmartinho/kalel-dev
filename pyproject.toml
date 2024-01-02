@@ -36,7 +36,7 @@ pythonpath = "."
 asyncio_mode = "auto"
 
 [tool.taskipy.tasks]
-run = "uvicorn kalel_dev.main:app --reload"
+run = "uvicorn kalel_dev.main:app --reload-include TEXT"
 css = "tailwindcss -i ./kalel_dev/static/src/tw.css -o ./kalel_dev/static/css/main.css --watch"
 lint = "ruff . && ruff check --select I . && ruff format . --check && mypy ."
 format = "ruff . --fix && ruff format . && ruff check --select I . --fix"
