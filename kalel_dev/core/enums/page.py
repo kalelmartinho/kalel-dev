@@ -1,7 +1,7 @@
 import enum
 
 
-class Pages(str, enum.Enum):
+class Page(str, enum.Enum):
 
     HOME = "Home"
     ABOUT = "About"
