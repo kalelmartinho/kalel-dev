@@ -12,7 +12,7 @@ This is a personal project to create a website for myself. The goal is to create
 This project uses or will use the following technologies:
 - [Python](https://www.python.org/) with [FastAPI](https://fastapi.tiangolo.com/) 
 - [HTMX](https://htmx.org/) with [Jinja Templates](https://jinja.palletsprojects.com/)
-- [TailwindCSS](https://tailwindcss.com/) with [PyTailwindCSS](https://github.com/timonweb/pytailwindcss)
+- [TailwindCSS](https://tailwindcss.com/)
 - [MongoDB](https://www.mongodb.com/) with [Beanie](https://roman-right.github.io/beanie/)
 - [Docker](https://www.docker.com/)
 
@@ -33,6 +33,7 @@ These tools are used to make development easier and more efficient.
 | [Taskipy](https://github.com/taskipy/taskipy)    | Task runner                                   |
 | [Pytest](https://docs.pytest.org/)               | Testing framework                             |
 | [Pytest-cov](https://pytest-cov.readthedocs.io/) | Coverage reports                              |
+| [PyTailwindCSS](https://github.com/timonweb/pytailwindcss) | TailwindCSS compiler for Python |
 
 
 
