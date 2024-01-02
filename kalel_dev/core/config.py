@@ -12,5 +12,8 @@ class Settings(BaseSettings):
     db_name: str = ""
     db_url: str = f"mongodb://{db_host}:{db_port}"
 
+    templates_dir: str = "kalel_dev/templates"
+    static_dir: str = "kalel_dev/static"
+
 
 settings = Settings()
