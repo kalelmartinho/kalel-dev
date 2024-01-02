@@ -25,6 +25,6 @@ async def create_session_cookie(response, email: EmailStr) -> str:
     response.set_cookie(
         key="Authorization",
         value=token,
-        expires=settings.refresh_token_expire,
+        expires=settings.cookie_exp,
     )
     return response
