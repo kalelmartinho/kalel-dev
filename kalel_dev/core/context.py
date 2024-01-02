@@ -1,3 +1,4 @@
+from fastapi import Request
 from kalel_dev.core.enums.page import Page
 from typing import TypedDict
 
@@ -40,7 +41,11 @@ def navigation_context(page: Page) -> list[NavigationItem]:
     return nav_items
 
 
-def get_base_context(page: Page) -> dict:
+def create_context(
+    request: Request,
+    page: Page,
+    extra_context: dict = None
+) -> dict:
 
     keywords =[
         "Kalel",
@@ -67,12 +72,15 @@ def get_base_context(page: Page) -> dict:
     ]
 
     base_context = {
-        "title": f"Kalel Dev {page.value}",
+        "request": request,
+        "title": f"Kalel Software Engineer - {page.value}",
         "description": "Kalel - Software Engineer",
         "author": "Kalel L. Martinho",
         "keywords": ', '.join(keywords),
         "navigation": navigation_context(page)
     }
+
+    base_context.update(extra_context or {})
 
     return base_context
 
