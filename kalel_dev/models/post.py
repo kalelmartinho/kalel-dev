@@ -9,4 +9,3 @@ class Post(Document, BaseModel):
     title: str
     content: str
     tags: list[str]
-

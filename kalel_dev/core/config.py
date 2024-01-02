@@ -2,7 +2,6 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-
     cookie_exp: int = 60 * 60 * 24
     token_key: str = "secret"
 
