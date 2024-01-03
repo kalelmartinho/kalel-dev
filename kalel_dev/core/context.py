@@ -13,13 +13,13 @@ class NavigationItem(TypedDict):
 
 def navigation_context(page: Page) -> list[NavigationItem]:
     nav_items = [
-        NavigationItem(name=page.HOME, url="/", active=page == Page.HOME),
+        NavigationItem(name=page.HOME.value, url="/", active=page == Page.HOME),
         NavigationItem(
-            name=page.PROJECTS, url="/projects", active=page == Page.PROJECTS
+            name=page.PROJECTS.value, url="/projects", active=page == Page.PROJECTS
         ),
-        NavigationItem(name=page.ABOUT, url="/about", active=page == Page.ABOUT),
-        NavigationItem(name=page.CONTACT, url="/contact", active=page == Page.CONTACT),
-        NavigationItem(name=page.BLOG, url="/blog", active=page == Page.BLOG),
+        NavigationItem(name=page.ABOUT.value, url="/about", active=page == Page.ABOUT),
+        NavigationItem(name=page.CONTACT.value, url="/contact", active=page == Page.CONTACT),
+        NavigationItem(name=page.BLOG.value, url="/blog", active=page == Page.BLOG),
     ]
 
     return nav_items
