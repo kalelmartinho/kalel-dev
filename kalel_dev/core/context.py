@@ -16,7 +16,7 @@ def navigation_context(page: Page) -> list[NavigationItem]:
     nav_items = [
         NavigationItem(name=page.HOME.value, url="/", active=page == Page.HOME),
         NavigationItem(
-            name=page.PORTFOLIO.value, url="/projects", active=page == Page.PORTFOLIO
+            name=page.PORTFOLIO.value, url="/portfolio", active=page == Page.PORTFOLIO
         ),
         NavigationItem(name=page.ABOUT.value, url="/about", active=page == Page.ABOUT),
         NavigationItem(name=page.CONTACT.value, url="/contact", active=page == Page.CONTACT),
