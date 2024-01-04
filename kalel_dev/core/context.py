@@ -3,6 +3,7 @@ from typing import Optional, TypedDict
 from fastapi import Request
 
 from kalel_dev.core.enums.page import Page
+import datetime
 
 
 class NavigationItem(TypedDict):
@@ -59,6 +60,7 @@ def create_context(
         "role": "Software Engineer",
         "keywords": ", ".join(keywords),
         "navigation": navigation_context(page),
+        "current_year": datetime.datetime.now().year,
     }
 
     base_context.update(extra_context or {})
