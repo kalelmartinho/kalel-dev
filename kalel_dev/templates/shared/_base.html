@@ -25,12 +25,15 @@
 </head>
 <body>
     {% block header %}
-    {% include "/shared/_header.html" %}
-    {% endblock %}
 
+    {% include "/shared/_header.html" %}
+
+    {% endblock %}
+    <div class="bg-gray-100 min-h-screen">
     {% block content %}
     <!-- This is where the content from the child template will go -->
     {% endblock %}
+    </div>
 
     {% block footer %}
     {% include "/shared/_footer.html" %}
