@@ -8,6 +8,7 @@ from kalel_dev.models.page_context import PageContext
 from kalel_dev.models.user import User
 from kalel_dev.models.comment import Comment
 from kalel_dev.models.project import Project
+from kalel_dev.models.message import Message
 
 
 async def init_db():
@@ -20,5 +21,6 @@ async def init_db():
             User,
             Comment,
             Project,
+            Message,
         ]
     )
