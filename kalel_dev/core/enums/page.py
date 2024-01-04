@@ -5,5 +5,5 @@ class Page(str, enum.Enum):
     HOME = "Home"
     ABOUT = "About"
     CONTACT = "Contact"
-    PROJECTS = "Projects"
+    PORTFOLIO = "Portfolio"
     BLOG = "Blog"
