@@ -56,6 +56,7 @@ def create_context(
         "title": f"Kalel Software Engineer - {page.value}",
         "description": "Kalel - Software Engineer",
         "author": "Kalel L. Martinho",
+        "role": "Software Engineer",
         "keywords": ", ".join(keywords),
         "navigation": navigation_context(page),
     }
