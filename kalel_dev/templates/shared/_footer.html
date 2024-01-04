@@ -1,16 +1,54 @@
-<footer class="bg-white dark:bg-zinc-900 bottom-0 w-full">
-  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-4">
-    <div class="grid grid-cols-2 gap-4 items-center">
-      <div>
-        <h2 class="font-bold text-lg text-gray-400">{{author}}</h2>
-        <p class="text-sm text-gray-400">{{role}}</p>
+
+<footer class="bg-zinc-900 dark:bg-zinc-900">
+  <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <div class="flex justify-center text-teal-600 dark:text-teal-300 sm:justify-start">
+        <ul class="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
+        <li>
+          <p class="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
+            Built with
+          </p>
+        <li>
+          <a
+            href="/"
+            rel="noreferrer"
+            target="_blank"
+            class="text-gray-700 transition hover:text-gray-700/75"
+          >
+            <span class="sr-only">FastAPI</span>
+            <img src="{{ url_for('static', path='img/fastapi.svg') }}" alt="FastAPI" class="h-5 w-5">
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://tailwindcss.com/"
+            rel="noreferrer"
+            target="_blank"
+            class="text-gray-700 transition hover:text-gray-700/75"
+          >
+            <span class="sr-only">TailwindCSS</span>
+            <img src="{{ url_for('static', path='img/tailwindcss.svg') }}" alt="TailwindCSS" class="h-5 w-5">
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://htmx.org/"
+            rel="noreferrer"
+            target="_blank"
+            class="text-gray-700 transition hover:text-gray-700/75"
+          >
+            <span class="sr-only">HTMX</span>
+            <img src="{{ url_for('static', path='img/htmx.svg') }}" alt="HTMX" class="h-5 w-5">
+          </a>
+        </li>
+      </ul>
       </div>
-      <div class="flex justify-end space-x-4">
-        <p class="text-sm text-gray-400">Built using:</p>
-        <img src="{{ url_for('static', path='img/fastapi.svg') }}" alt="FastAPI" class="h-5 w-5">
-        <img src="{{ url_for('static', path='img/tailwindcss.svg') }}" alt="TailwindCSS" class="h-5 w-5">
-        <img src="{{ url_for('static', path='img/htmx.svg') }}" alt="HTMX" class="h-5 w-5">
-      </div>
+
+      <p class="mt-4 text-center text-sm text-gray-500 dark:text-gray-400 lg:mt-0 lg:text-right">
+        Kalel L. Martinho {{ current_year }}.
+      </p>
     </div>
   </div>
 </footer>
