@@ -24,6 +24,7 @@ pytest = "^7.4.4"
 pytest-asyncio = "^0.23.3"
 pytest-cov = "^4.1.0"
 pytailwindcss = "^0.2.0"
+watchfiles = "^0.21.0"
 
 [tool.ruff]
 exclude = [".venv"]
@@ -36,7 +37,7 @@ pythonpath = "."
 asyncio_mode = "auto"
 
 [tool.taskipy.tasks]
-run = "uvicorn kalel_dev.main:app --reload-include TEXT"
+run = "uvicorn kalel_dev.main:app --reload --reload-include *.html --host 0.0.0.0"
 css = "tailwindcss -i ./kalel_dev/static/src/tw.css -o ./kalel_dev/static/css/main.css --watch"
 lint = "ruff . && ruff check --select I . && ruff format . --check && mypy ."
 format = "ruff . --fix && ruff format . && ruff check --select I . --fix"
