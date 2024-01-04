@@ -1,12 +1,13 @@
 from fastapi import FastAPI
 
+from kalel_dev.core.lifespan import lifespan
 from kalel_dev.core.front import static_files
 from kalel_dev.routes.router import get_api_router, get_bff_router
 
 
 def create_app():
     """Factory function for creating the FastAPI app"""
-    fastapi = FastAPI()
+    fastapi = FastAPI(lifespan=lifespan)
 
     fastapi.include_router(get_bff_router(), tags=["bff"])
     fastapi.include_router(get_api_router(), prefix="/api")
