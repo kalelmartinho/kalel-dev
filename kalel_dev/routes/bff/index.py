@@ -10,4 +10,8 @@ router = APIRouter()
 
 @router.get("/")
 async def index(request: Request):
-    return templates.TemplateResponse("/main.html", create_context(request, page))
+    hero_context = {
+        "greeting": "Hello, I'm Kalel Martinho",
+        "hero_description": "I'm a passionate software engineer currently working as a Python Software Engineer at a startup in Brazil.",
+    }
+    return templates.TemplateResponse("/main.html", create_context(request, page, hero_context))

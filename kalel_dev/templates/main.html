@@ -1,6 +1,27 @@
 {% extends "/shared/_base.html" %}
 
 {% block content %}
-    <h1>Home</h1>
-    <p>Hello World!</p>
+<div class="bg-gray-200 min-h-screen">
+  <!-- Hero Section -->
+  <section class="text-black body-font">
+    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-row">
+      <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded-full mr-10" alt="Kalel Martinho" src="{{ url_for('static', path='img/profile.png') }}">
+      <div class="text-left w-1/2">
+        <h1 class="title-font sm:text-3xl text-2xl mb-4 font-medium">{{greeting}}</h1>
+        <p class="mb-8 leading-relaxed text-sm">{{role}}</p>
+        <p class="mb-8 leading-relaxed text-sm">{{hero_description}}.</p>
+        <div class="flex justify-center">
+          <a href="/contact" class="mr-5 inline-flex items-center text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-teal-600 rounded text-sm">
+            Contact Me
+          </a>
+          <a href="/blog" class="inline-flex items-center text-white bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 rounded text-sm">
+            Blog
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other sections of your page go here -->
+</div>
 {% endblock %}
