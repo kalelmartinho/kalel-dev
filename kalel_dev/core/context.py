@@ -53,8 +53,8 @@ def create_context(
 
     base_context = {
         "request": request,
-        "title": f"Kalel Software Engineer - {page.value}",
-        "description": "Kalel - Software Engineer",
+        "page_title": f"Kalel - Software Engineer - {page.value}",
+        "page_description": "Kalel Martinho personal website, including portfolio projects, blog posts and contact information.",
         "author": "Kalel L. Martinho",
         "role": "Software Engineer",
         "keywords": ", ".join(keywords),
