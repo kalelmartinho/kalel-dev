@@ -1,12 +1,10 @@
 from fastapi import APIRouter
-
-from .bff import index_router, contact_router
+from .front import router as front_router
 
 
 def get_bff_router():
     bff_router = APIRouter()
-    bff_router.include_router(index_router)
-    bff_router.include_router(contact_router)
+    bff_router.include_router(front_router)
     return bff_router
 
 
