@@ -20,7 +20,24 @@ async def index_page(request: Request):
 @router.get("/about")
 async def about_page(request: Request):
     page = Page.ABOUT
-    return templates.TemplateResponse("/about.html", create_context(request, page))
+    about_context = {
+        "about_title": "Who is Kalel?",
+        "about_paragraphs": [
+            """Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod, nisi vitae
+            eleifend ultricies, nulla ipsum aliquam leo, vitae sollicitudin nisi urna quis
+            turpis. Nunc sit amet elit vitae leo ultricies finibus. Sed euismod, nisl vel
+            ultrices aliquam, elit ipsum ultricies elit, ac aliquet velit erat vitae dolor.""",
+            """Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod, nisi vitae
+            eleifend ultricies, nulla ipsum aliquam leo, vitae sollicitudin nisi urna quis
+            turpis. Nunc sit amet elit vitae leo ultricies finibus. Sed euismod, nisl vel
+            ultrices aliquam, elit ipsum ultricies elit, ac aliquet velit erat vitae dolor.""",
+            """Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod, nisi vitae
+            eleifend ultricies, nulla ipsum aliquam leo, vitae sollicitudin nisi urna quis
+            turpis. Nunc sit amet elit vitae leo ultricies finibus. Sed euismod, nisl vel
+            ultrices aliquam, elit ipsum ultricies elit, ac aliquet velit erat vitae dolor.""",
+        ],
+    }
+    return templates.TemplateResponse("/about.html", create_context(request, page, about_context))
 
 
 @router.get("/blog")
