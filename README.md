@@ -7,6 +7,14 @@ Currently, the website is a work in progress.
 
 This is a personal project to create a website for myself. The goal is to create a website that is easy to maintain and update. The website will be a blog and portfolio. The blog will be a place for me to write about my projects and other things I find interesting. The portfolio will be a place to showcase my projects and skills.
 
+### Rules
+
+- No JavaScript allowed (except for HTMX and TailwindCSS configuration)
+- Simple and minimalistic
+- Easy to maintain and update
+- Fast and performant
+
+
 ## ⚙️ Technologies
 
 This project uses or will use the following technologies:
